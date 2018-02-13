@@ -83,9 +83,8 @@ def access_request(pid, record, template, **kwargs):
     datastore = LocalProxy(
         lambda: current_app.extensions['security'].datastore)
 
-    # Record must be in restricted access mode.
-    if record.get('access_right') != 'restricted' or \
-       not record.get('access_conditions'):
+    # Record must be in restricted or embargoed access mode.
+    if record.get('access_right') not in ['restricted', 'embargoed']:
         abort(404)
 
     # Record must have an owner and owner must still exists.
