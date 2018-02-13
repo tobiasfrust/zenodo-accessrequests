@@ -33,7 +33,6 @@ from flask import current_app
 from itsdangerous import BadData, JSONWebSignatureSerializer, \
     SignatureExpired, TimedJSONWebSignatureSerializer
 
-
 # TODO: Remove dependency on current_app
 
 

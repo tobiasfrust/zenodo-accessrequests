@@ -40,8 +40,8 @@ from invenio_access import InvenioAccess
 from invenio_accounts import InvenioAccounts
 from invenio_accounts.testutils import create_test_user
 from invenio_accounts.views import blueprint as blueprint_user
-from invenio_db import db as db_
 from invenio_db import InvenioDB
+from invenio_db import db as db_
 from invenio_formatter import InvenioFormatter
 from invenio_mail import InvenioMail as Mail
 from invenio_pidstore import InvenioPIDStore
